@@ -1,5 +1,6 @@
 from tkinter import *
 from tkinter import ttk
+import cv2
 
 # Pillow Library
 from PIL import Image, ImageTk
@@ -10,7 +11,6 @@ from tkinter import messagebox
 # import MySql
 import mysql.connector
 
-import cv2
 
 
 class Student:
