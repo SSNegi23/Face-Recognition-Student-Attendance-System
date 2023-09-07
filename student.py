@@ -19,7 +19,7 @@ class Student:
         self.root=root
         # setting geometry
         self.root.geometry("1530x790+0+0")   # 1530x790 is window size, both 0 is the coordinate of x and y i.e. start window from top-left
-        self.root.title("Student Details")
+        self.root.title("Face Recognition System")
 
         # ========================= Variables ========================= 
         self.var_dep=StringVar()
@@ -41,26 +41,26 @@ class Student:
         # width of window is 1530, for 3 img width will be 510 per img
         # 1st image
         img1 = Image.open(r"D:\Deep Learning\Student Attendance System\images\student_01.jpg")
-        img1=img1.resize((510,130),Image.ANTIALIAS)
+        img1=img1.resize((510,130),Image.Resampling.LANCZOS)
         self.background1=ImageTk.PhotoImage(img1)
         bg1_label=Label(self.root,image=self.background1)
         bg1_label.place(x=0,y=0,width=525,height=130)
         # 2nd image
         img2 = Image.open(r"D:\Deep Learning\Student Attendance System\images\student_02.jpg")
-        img2=img2.resize((510,130),Image.ANTIALIAS)
+        img2=img2.resize((510,130),Image.Resampling.LANCZOS)
         self.background2=ImageTk.PhotoImage(img2)
         bg2_label=Label(self.root,image=self.background2)
         bg2_label.place(x=510,y=0,width=510,height=130)
         # 3rd image
         img3 = Image.open(r"D:\Deep Learning\Student Attendance System\images\student_03.jpg")
-        img3=img3.resize((510,130),Image.ANTIALIAS)
+        img3=img3.resize((510,130),Image.Resampling.LANCZOS)
         self.background3=ImageTk.PhotoImage(img3)
         bg3_label=Label(self.root,image=self.background3)
         bg3_label.place(x=1020,y=0,width=510,height=130)
 
         # bg image
         img_bg = Image.open(r"D:\Deep Learning\Student Attendance System\images\student_bg.jpg")
-        img_bg=img_bg.resize((1530,710),Image.ANTIALIAS)
+        img_bg=img_bg.resize((1530,710),Image.Resampling.LANCZOS)
         self.background=ImageTk.PhotoImage(img_bg)
         bg_img=Label(self.root,image=self.background)
         bg_img.place(x=0,y=130,width=1530,height=710)
@@ -79,7 +79,7 @@ class Student:
         left_frame.place(x=10,y=10,width=760,height=580)
 
         img_left_frame = Image.open(r"D:\Deep Learning\Student Attendance System\images\student_left.jpg")
-        img_left_frame=img_left_frame.resize((750,130),Image.ANTIALIAS)
+        img_left_frame=img_left_frame.resize((750,130),Image.Resampling.LANCZOS)
         self.img_left=ImageTk.PhotoImage(img_left_frame)
         img_left_top=Label(left_frame,image=self.img_left)
         img_left_top.place(x=5,y=0,width=750,height=130)
@@ -247,7 +247,7 @@ class Student:
         right_frame.place(x=800,y=10,width=660,height=580)
 
         img_right = Image.open(r"D:\Deep Learning\Student Attendance System\images\student_01.jpg")
-        img_right=img_right.resize((660,130),Image.ANTIALIAS)
+        img_right=img_right.resize((660,130),Image.Resampling.LANCZOS)
         self.background1=ImageTk.PhotoImage(img_right)
         bg1_label=Label(right_frame,image=self.background1)
         bg1_label.place(x=5,y=0,width=650,height=130)
